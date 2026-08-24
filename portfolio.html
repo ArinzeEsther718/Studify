@@ -62,16 +62,20 @@ nav a:hover {
 h1, h2 {
   color: #8b004f; 
 }
-
-img {
-  width: 100%;
-  max-width: 400px;
+    /* SQUARE IMAGES - KEEPING YOUR PINK */
+img{
+  width: 300px;       /* same width */
+  height: 300px;      /* same height = square */
+  object-fit: cover;  /* crops photo nicely so it doesn't stretch */
   display: block;
   margin: 15px auto;
   border-radius: 15px;
   border: 3px solid #c71585;
-}
-
+    }
+    .my-image {
+  width: 280px;   /* slightly smaller */
+  height: 280px;
+    }
 section {
   background: white;
   padding: 20px;
