@@ -36,17 +36,18 @@ header p {
   font-size: 1.2rem;
 }
 
-nav {
+   nav {
   background: rgba(199, 21, 133, 0.95); 
   padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
+  position: sticky; /* ← keeps it on top when you scroll */
+  top: 0;           /* ← sticks to very top */
+  z-index: 1000;    /* ← makes sure it stays above everything */
+  border-radius: 0; /* optional: make it full width */
+  margin-bottom: 0;
+  }
 nav a {
   color: white;
   text-decoration: none;
@@ -146,7 +147,7 @@ footer {
   object-fit: cover;
 }
   </style>
-  <header id="hero"> 
+  
   <nav>
     <img src="logo.png"alt="my logo"class="logo"/>
     <div class="nav-links">
@@ -155,6 +156,8 @@ footer {
     <a href="#contact">Contact</a>
     </div>
   </nav>
+
+  <header id="hero">
   	<h1>My Portfolio</h1>
   	<p>Hi! I'm Esther Arinze.</p>
   </header>
