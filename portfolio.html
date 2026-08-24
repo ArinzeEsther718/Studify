@@ -7,57 +7,45 @@
 </head>
 <body>
   <style>
-    body {
-font-family: Arial, sans-serif;
-  background-color: #fff0f5; /* light pink background */
-  color: #333;
+/*new*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffafc;
+  color: #222; 
   margin: 0;
   padding: 20px;
   line-height: 1.6;
 }
 
+/* HERO + NAV - High contrast */
 header {
   text-align: center;
-  background: #ff69b4; /* hot pink */
+  background: linear-gradient(135deg, #c71585, #ff69b4);
+  color: white; 
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+header h1 {
   color: white;
-  padding: 20px;
-  border-radius: 10px;
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+header p {
+  color: #ffe4e1; 
+  font-size: 1.2rem;
 }
 
-h1, h2 {
-  color: #c71585; /* dark pink */
-}
-
-img {
-  width: 100%;
-  max-width: 400px;
-  display: block;
-  margin: 15px auto;
-  border-radius: 15px;
-  border: 3px solid #ff69b4;
-}
-
-section {
-  background: white;
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-ol{
-  margin: 2px;
-  text-align: left;
-}
-/* Nav bar for linking */
 nav {
-  background: #ff69b4;
+  background: rgba(199, 21, 133, 0.95); 
   padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 nav a {
   color: white;
@@ -67,67 +55,64 @@ nav a {
 }
 nav a:hover {
   color: #ffe4e1;
+  text-decoration: underline;
 }
-nav a:active {
-  color: #fff0f5;
+
+/* HEADINGS - Darker for contrast on light backgrounds */
+h1, h2 {
+  color: #8b004f; 
 }
-nav a:focus {
-  color: #fff0f5;
-  background: rgba(255,255,255,0.2);
-  padding: 5px 10px;
+
+img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 15px auto;
   border-radius: 15px;
+  border: 3px solid #c71585;
 }
-.logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  border: 2px solid white;
-  object-fit: cover;
-  object-position: center top;
+
+section {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+
 /* Projects cards */
 .project {
-  background: #ffe4e1;
+  background: #fff0f5;
   padding: 15px;
   margin: 10px 0;
   border-radius: 8px;
-  border-left: 4px solid #ff69b4;
+  border-left: 4px solid #c71585;
 }
 .project h3 {
-  color: #c71585;
+  color: #8b004f; 
   margin-bottom: 5px;
 }
 
 /* CONTACT SECTION */
 .section.alt {
-  background: #ffe4e1; /* light pink like your skills list */
+  background: #fff0f5;
   text-align: center;
 }
 
-.container {
-  max-width: 600px;
-  margin: auto;
-  padding: 10px;
-}
-
-.contact-info {
-  margin: 20px 0;
-  line-height: 2;
-}
-
 .contact-info a {
-  color: #c71585; /* dark pink */
+  color: #c71585; 
   text-decoration: none;
   font-weight: bold;
 }
 .contact-info a:hover {
+  color: #8b004f;
   text-decoration: underline;
 }
 
-/* WHATSAPP BUTTON */
+/* WHATSAPP BUTTON - High contrast */
 .btn {
   display: inline-block;
-  background: #ff69b4; /* hot pink like header */
+  background: #c71585;
   color: white;
   padding: 12px 24px;
   text-decoration: none;
@@ -136,17 +121,25 @@ nav a:focus {
   font-weight: bold;
 }
 .btn:hover {
-  background: #c71585; /* dark pink */
+  background: #8b004f; 
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  background: #ff69b4;
+  background: #8b004f;
   color: white;
   padding: 15px;
   border-radius: 10px;
   margin-top: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  border: 2px solid white;
+  object-fit: cover;
 }
   </style>
   <header id="hero"> 
