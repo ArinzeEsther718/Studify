@@ -261,10 +261,11 @@ ol {
   font-size: 15px;
   margin: 0;
 }
-
+    
 img {
-  width: 95%;
-  max-width: 400px; 
+  width: 300px;      /* changed */
+  height: 300px;     /* added - same as width = square */
+  object-fit: cover; /* added - crops photo nicely */
   display: block;
   border-radius: 15px;
   border: 3px solid blue;
@@ -273,8 +274,16 @@ img {
 
 @media (min-width: 768px) {
   img {
-    max-width: 500px;
+    width: 400px;    /* changed */
+    height: 400px;   /* added */
     margin: 15px 0;
     margin-left: 0;
   }
-    }
+}
+.header-img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+}
