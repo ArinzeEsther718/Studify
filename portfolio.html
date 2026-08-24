@@ -13,17 +13,25 @@ body {
   background-color: #fffafc;
   color: #222; 
   margin: 0;
-  padding: 20px;
+  padding: 0;
   line-height: 1.6;
 }
-
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    }
 /* HERO + NAV - High contrast */
 header {
   text-align: center;
   background: linear-gradient(135deg, #c71585, #ff69b4);
   color: white; 
   padding: 40px 20px;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
+  margin-top: 0;
 }
 
 header h1 {
@@ -45,7 +53,7 @@ header p {
   position: sticky; /* ← keeps it on top when you scroll */
   top: 0;           /* ← sticks to very top */
   z-index: 1000;    /* ← makes sure it stays above everything */
-  border-radius: 0; /* optional: make it full width */
+  border-radius: 0 0 0 0; /* optional: make it full width */
   margin-bottom: 0;
   }
 nav a {
@@ -149,11 +157,13 @@ footer {
   </style>
   
   <nav>
+    <div class="container">
     <img src="logo.png"alt="my logo"class="logo"/>
     <div class="nav-links">
     <a href="#hero">Home</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
+    </div>
     </div>
   </nav>
 
@@ -214,7 +224,7 @@ footer {
 
   <!-- SECTION 5: CONTACT - NEW -->
 <section id="contact" class="section alt">
-    <div class="container">
+    <div>
       <h2>Contact Me</h2>
       <p>Have a question or want to work together? Let's connect!</p>
       
