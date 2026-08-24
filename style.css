@@ -287,3 +287,60 @@ img {
   margin: 20px auto;
   display: block;
 }
+/* NEW: OVERRIDE FOR HEADER-IMG ONLY - MAKES IT NOT SQUARE */
+.hero-split .header-img {
+  width: 100% !important;      /* overrides the 300px */
+  height: auto !important;     /* overrides the 300px */
+  max-width: 500px;
+  border-radius: 15px;
+  border: 3px solid #ffc107;
+  margin: 0;
+  display: block;
+}
+
+/* NEW: FLEX CONTAINER FOR TEXT BESIDE IMAGE */
+.hero-split {
+  background: white;
+  padding: 60px 20px;
+}
+
+.hero-split-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-text h2 {
+  color: darkblue;
+  font-size: 2rem;
+  border: none; /* removes yellow line */
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.hero-text p {
+  color: #333;
+  font-size: 17px;
+  text-align: left;
+  margin: 0 0 20px 0;
+  max-width: 100%;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-split-content {
+    flex-direction: column;
+  }
+  .hero-text, .hero-text h2, .hero-text p {
+    text-align: center;
+  }
+}
