@@ -20,9 +20,6 @@ body {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
     }
 /* HERO + NAV - High contrast */
 header {
@@ -46,9 +43,7 @@ header p {
 
    nav {
   background: rgba(199, 21, 133, 0.95); 
-  padding: 12px 20px;
-  display: flex;
-  justify-content: space-between;
+  padding: 12px 0px;
   position: sticky; /* ← keeps it on top when you scroll */
   top: 0;           /* ← sticks to very top */
   z-index: 1000;    /* ← makes sure it stays above everything */
@@ -65,7 +60,22 @@ nav a:hover {
   color: #ffe4e1;
   text-decoration: underline;
 }
-
+nav .container {
+  display: flex; /* ← ADDED HERE */
+  justify-content: space-between; /* ← pushes logo left, links right */
+  align-items: center;
+}
+.nav-links {
+  display: flex; /* ← makes links sit in a row */
+  gap: 20px; /* ← space between Home About Contact */
+}
+/* MOBILE: STACK LOGO AND LINKS */
+@media (max-width: 600px) {
+  nav .container {
+    flex-direction: column; /* ← stacks them */
+    gap: 10px;
+  }
+  }
 /* HEADINGS - Darker for contrast on light backgrounds */
 h1, h2 {
   color: #8b004f; 
