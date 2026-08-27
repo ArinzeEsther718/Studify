@@ -22,8 +22,7 @@
           width: 85%;
         }
      }
-
-     }
+    
     #studify-form-wrap h2 {
       color: darkblue;
       text-align: center;
@@ -198,4 +197,23 @@
     </div>
   </footer>
 </body>
+  <script>
+  const form = document.querySelector('#student form');
+  const thanksBox = document.getElementById('thanks');
+
+  form.addEventListener('submit', function(e) {
+    // Get which radio was selected
+    const style = document.querySelector('input[name="style"]:checked').value;
+
+    // Create a message
+    let message = "";
+    if(style === "Visual") message = "👀 You're a VISUAL learner! You'll love our video lessons and diagrams.";
+    if(style === "Audio") message = "🎧 You're an AUDIO learner! You'll love our audio explanations and voice notes.";
+    if(style === "Hands-on") message = "✋ You're a HANDS-ON learner! You'll love our practice questions and activities.";
+    if(style === "Reading-Writing") message = "📖 You're a READER/WRITER! You'll love our clear notes and step-by-step guides.";
+
+    // Put it in the thank you box
+    thanksBox.innerHTML += `<p style="background:#fff9e6; padding:20px; border-radius:10px; border:2px solid #ffc107; margin-top:20px; font-size:18px;"><b>Your Learning Style:</b><br>${message}</p>`;
+  });
+  </script>
     </html>
