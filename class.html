@@ -22,7 +22,7 @@
           width: 85%;
         }
      }
-    
+
     #studify-form-wrap h2 {
       color: darkblue;
       text-align: center;
@@ -138,12 +138,12 @@
   <div id="student" class="form-box">
     <h3>Student Registration</h3>
     <form action="https://forminit.com/f/rd1jl6vv2mb" method="POST">
-  <input type="hidden" name="_subject" value="New Student Registration - Studify">
-  <input type="hidden" name="role" value="Student">
-  <input type="hidden" name="_next" value="https://arinzeesther718.github.io/Studify/class.html#thanks">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <select name="class" required>
+  <input type="hidden" name="fi-subject" value="New Student Registration - Studify">
+  <input type="hidden" name="fi-role" value="Student">
+  <input type="hidden" name="fi-next" value="https://arinzeesther718.github.io/Studify/class.html#thanks">
+      <input type="text" name="fi-name" placeholder="Full Name" required>
+      <input type="email" name="fi-email" placeholder="Email Address" required>
+      <select name="fi-class" required>
         <option value="">What class are you in?</option>
         <option>JSS1</option><option>JSS2</option><option>JSS3</option>
         <option>SS1</option><option>SS2</option><option>SS3</option>
@@ -151,10 +151,10 @@
 
       <div class="style-question">
         <p><b>Think of a skill you know best, like playing football, braiding hair, tailoring.</b><br>How did you learn it best?</p>
-        <label class="style-option"><input type="radio" name="style" value="Visual" required><span>👀 By watching videos and seeing someone do it</span></label>
-        <label class="style-option"><input type="radio" name="style" value="Audio"><span>🎧 By listening to guides and explanations</span></label>
-        <label class="style-option"><input type="radio" name="style" value="Hands-on"><span>✋ By practicing over and over myself</span></label>
-        <label class="style-option"><input type="radio" name="style" value="Reading-Writing"><span>📖 By reading steps and patterns</span></label>
+        <label class="style-option"><input type="radio" name="fi-style" value="Visual" required><span>👀 By watching videos and seeing someone do it</span></label>
+        <label class="style-option"><input type="radio" name="fi-style" value="Audio"><span>🎧 By listening to guides and explanations</span></label>
+        <label class="style-option"><input type="radio" name="fi-style" value="Hands-on"><span>✋ By practicing over and over myself</span></label>
+        <label class="style-option"><input type="radio" name="fi-style" value="Reading-Writing"><span>📖 By reading steps and patterns</span></label>
       </div>
 
       <button type="submit" class="btn-studify">Submit</button>
@@ -166,13 +166,13 @@
   <div id="teacher" class="form-box">
     <h3>Teacher Registration</h3>
 <form action="https://forminit.com/f/rd1jl6vv2mb" method="POST">
-  <input type="hidden" name="_subject" value="New Teacher Registration - Studify">
-  <input type="hidden" name="role" value="Teacher">
-  <input type="hidden" name="_next" value="https://arinzeesther718.github.io/Studify/class.html#thanks">   
-  <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="text" name="subject" placeholder="Subject you teach" required>
-      <select name="level" required>
+  <input type="hidden" name="fi-subject" value="New Teacher Registration - Studify">
+  <input type="hidden" name="fi-role" value="Teacher">
+  <input type="hidden" name="fi-next" value="https://arinzeesther718.github.io/Studify/class.html#thanks">   
+  <input type="text" name="fi-name" placeholder="Full Name" required>
+      <input type="email" name="fi-email" placeholder="Email Address" required>
+      <input type="text" name="fi-subject-taught" placeholder="Subject you teach" required>
+      <select name="fi-level" required>
         <option value="">What level do you teach?</option>
         <option>JSS</option><option>SS</option>
       </select>
@@ -196,14 +196,13 @@
       <p>&copy; 2026 Studify. Less Memorising, More Understanding. SDG focus-4</p>
     </div>
   </footer>
-</body>
   <script>
   const form = document.querySelector('#student form');
   const thanksBox = document.getElementById('thanks');
 
   form.addEventListener('submit', function(e) {
     // Get which radio was selected
-    const style = document.querySelector('input[name="style"]:checked').value;
+    const style = document.querySelector('input[name="fi-style"]:checked').value;
 
     // Create a message
     let message = "";
@@ -215,5 +214,6 @@
     // Put it in the thank you box
     thanksBox.innerHTML += `<p style="background:#fff9e6; padding:20px; border-radius:10px; border:2px solid #ffc107; margin-top:20px; font-size:18px;"><b>Your Learning Style:</b><br>${message}</p>`;
   });
-  </script>
+</script>
+</body>
     </html>
