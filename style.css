@@ -344,3 +344,23 @@ img {
     text-align: center;
   }
 }
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.site-nav a {
+  margin-left: 0; /* remove old margin */
+}
+
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        gap: 12px;
+    }
+   .site-nav {
+        justify-content: center;
+        gap: 12px;
+        font-size: 14px;
+    }
+    }
