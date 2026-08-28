@@ -141,7 +141,7 @@
   <input type="hidden" name="Subject" value="New Student Registration - Studify">
   <input type="hidden" name="Role" value="Student">
       <input type="text" name="Name" placeholder="Full Name" required>
-      <input type="email"name="Sender-email" placeholder="Email Address" required>
+      <input type="email" name="Sender-email" placeholder="Email Address" required>
       <select name="Class" required>
         <option value="">What class are you in?</option>
         <option>JSS1</option><option>JSS2</option><option>JSS3</option>
@@ -153,7 +153,7 @@
         <label class="style-option"><input type="radio" name="style" value="Visual" required><span>👀 By watching videos and seeing someone do it</span></label>
         <label class="style-option"><input type="radio" name="style" value="Audio"><span>🎧 By listening to guides and explanations</span></label>
         <label class="style-option"><input type="radio" name="style" value="Hands-on"><span>✋ By practicing over and over myself</span></label>
-        <label class="style-option"><input type="radio" name="s><span>📖ue="Reading-Writing"><span>📖 By reading steps and patterns</span></label>
+        <label class="style-option"><input type="radio" name="style" value="Reading-Writing"><span>📖 By reading steps and patterns</span></label>
       </div>
       <button type="submit" class="btn-studify" onclick="showStyle()">Submit</button>
     </form>
@@ -189,7 +189,7 @@
   
   <script>
 function showStyle() {
-  const style = document.querySelector('input[name="Style"]:checked');
+  const style = document.querySelector('input[name="style"]:checked');
   
   if(!style) {
     alert("Please select your learning style first 😊");
