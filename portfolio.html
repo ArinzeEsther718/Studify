@@ -4,25 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css"
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-    <img src="logo.png"alt="my logo"class="logo"/>
+<header class="site-header">
+    <div class="container">
+      <a href="#hero" class="brand">
+        <img src="logo.png" alt="my logo"/>
     <div class="nav-links">
     <a href="#hero">Home</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
     <a href="index.html">Back</a>
     </div>
+      </a>
     </div>
-  </nav>
+</header>
+  
 
-  <header id="hero">
+  <section id="hero" class="hero">
   	<h1>My Portfolio</h1>
   	<p>Hi! I'm Esther Arinze.</p>
-  </header>
+  </section>
   
   <img src="me.jpg" alt="My picture"class="my-image">
 
@@ -90,6 +93,10 @@
     </div>
   </section>
 
-  <footer>© Esther 2026</footer>
+<footer class="site-footer">
+    <div class="container">
+      © Esther 2026
+    </div>
+    </footer>
 </body>
 </html>
