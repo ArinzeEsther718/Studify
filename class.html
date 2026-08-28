@@ -167,9 +167,9 @@
   <input type="hidden" name="Subject" value="New Teacher Registration - Studify">
   <input type="hidden" name="Role" value="Teacher" required>
   <input type="text" name="Name" placeholder="Full Name" required>
-      <input type="email" name="fi-sender-email" placeholder="Email Address" required>
-      <input type="text" name="fi-subject-taught" placeholder="Subject you teach" required>
-      <select name="fi-level" required>
+      <input type="email" name="Sender-email" placeholder="Email Address" required>
+      <input type="text" name="Subject-taught" placeholder="Subject you teach" required>
+      <select name="level" required>
         <option value="">What level do you teach?</option>
         <option>JSS</option><option>SS</option>
       </select>
@@ -189,7 +189,7 @@
   
   <script>
 function showStyle() {
-  const style = document.querySelector('input[name="fi-style"]:checked');
+  const style = document.querySelector('input[name="Style"]:checked');
   
   if(!style) {
     alert("Please select your learning style first 😊");
@@ -202,10 +202,10 @@ function showStyle() {
   if(style.value === "Hands-on") message = "✋ You're a HANDS-ON learner! You'll love our practice questions and activities.";
   if(style.value === "Reading-Writing") message = "📖 You're a READER/WRITER! You'll love our clear notes and step-by-step guides.";
 
-  alert("Thank you for joining Studify, " + document.querySelector('input[name="fi-name"]').value + "!\n\n" + message + "\n\nCheck your email for next steps!");
+  alert("Thank you for joining Studify, " + document.querySelector('input[name="Name"]').value + "!\n\n" + message + "\n\nCheck your email for next steps!");
 }
     function showTeacher() {
-  let name = document.querySelector('#teacher input[name="fi-name"]').value;
+  let name = document.querySelector('#teacher input[name="Name"]').value;
   alert("Thank you for joining Studify as a TEACHER, " + name + "!\n\n🎓 We'll review your application and email you within 24 hours!\n\nCheck your email for next steps!");
 }
 
