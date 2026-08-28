@@ -173,7 +173,7 @@
         <option value="">What level do you teach?</option>
         <option>JSS</option><option>SS</option>
       </select>
-      <button type="submit" class="btn-studify">Submit</button>
+      <button type="submit" class="btn-studify" onclick="showTeacher()">Submit</button>
     </form>
     <p><a href="#" class="back-link">← Back</a></p>
   </div>
@@ -204,6 +204,11 @@ function showStyle() {
 
   alert("Thank you for joining Studify, " + document.querySelector('input[name="fi-name"]').value + "!\n\n" + message + "\n\nCheck your email for next steps!");
 }
+    function showTeacher() {
+  let name = document.querySelector('#teacher input[name="fi-name"]').value;
+  alert("Thank you for joining Studify as a TEACHER, " + name + "!\n\n🎓 We'll review your application and email you within 24 hours!\n\nCheck your email for next steps!");
+}
+
   </script>
 </body>
     </html>
